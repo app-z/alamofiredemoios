@@ -56,8 +56,7 @@ class NetworkService {
     
 
     var onError: ((_ code: Int , _ description: String)->())?
-    
-\
+
 ```
 
 ### Use case
