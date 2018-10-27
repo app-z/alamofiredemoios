@@ -7,7 +7,7 @@ Using Swift's Encoder/Decoder protocols which uses NSDictionary as its underlyin
 
 
   - Simple connecting to project
-  - No need anotation for parse field of model
+  - No need anotation for parse fields of model
   - Magic like POJO
 
 
