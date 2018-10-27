@@ -30,5 +30,40 @@ class AlamofireDemoTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    
+class TheMoviesPageTests: XCTestCase {
+        
+        override func setUp() {
+            super.setUp()
+        }
+
+        func testExample(){
+            let expec = expectation(description: "get movies")
+            let registrationPresenter = MoviesPresenter(delegate: MockUIViewController1(expectation: expec))
+            registrationPresenter.requestMovies()
+            wait(for: [expec], timeout: 3)
+        }
+    }
+    
+    //there are the mock of UIviewController which using the Presenter
+    class MockUIViewController1: MoviesDelegate{
+        
+        var expec: XCTestExpectation
+        init(expectation: XCTestExpectation) {
+            self.expec = expectation
+        }
+        func showProgress(){}
+        func hideProgress(){}
+        func moviesDidSucceed() {
+            self.expec.fulfill()
+        }
+        
+        func moviesDidFailed(code: Int, error: String) {
+//            XCTAssertEqual(error, "???")
+            print("!!!")
+            self.expec.fulfill()
+        }
+    }
 
 }

@@ -12,7 +12,7 @@ class MovieViewCell: UITableViewCell {
 
     
     @IBOutlet weak var movieImage: UIImageView!
-    var movieId : String = ""
+    var movieId : String?
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -10,15 +10,30 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-//protocol MovieDelegat {
-//    func onMoveiClick(_ movieId : String)
-//}
+extension MoviesTableVC : MoviesDelegate{
+    func showProgress() {
+    }
+    
+    func hideProgress() {
+    }
+    
+    func moviesDidSucceed() {
+        tableView.reloadData()
+    }
+    
+    func moviesDidFailed(code: Int, error: String) {
+        showError(errorMessage: error, parentView: self, errCallback: self)
+    }
+}
 
-class MoviesTableVC: UITableViewController,  ErrorDialogCallBack {
 
-    let networkService = NetworkService()
-    var movies : [Movie] = []
+class MoviesTableVC: UITableViewController, ErrorDialogCallBack {
 
+//    let networkService = NetworkService()
+//    var movies : [Movie] = []
+    
+    var presenter: MoviesPresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,16 +41,9 @@ class MoviesTableVC: UITableViewController,  ErrorDialogCallBack {
         self.tableView.tableFooterView = nil;
         self.tableView.separatorStyle = .none
 
-        networkService.fetchMovies()
-        
-        networkService.onCompleteMovies = { result in
-            self.movies = result
-            self.tableView.reloadData();
-        }
-        
-        networkService.onError = { code, error in
-            showError(errorMessage: error, parentView: self, errCallback: self);
-        }
+        self.presenter = MoviesPresenter(delegate: self)
+        self.presenter?.requestMovies()
+
     }
 
     // MARK: - Table view data source
@@ -47,17 +55,17 @@ class MoviesTableVC: UITableViewController,  ErrorDialogCallBack {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.movies.count
+        return self.presenter?.movies.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "idMovieViewCell", for: indexPath) as! MovieViewCell
 
-        cell.movieId = movies[indexPath.row].id
+        cell.movieId = (self.presenter?.movies[indexPath.row].id)!
         
-        let imgUrl = movies[indexPath.row].poster
+        let imgUrl = self.presenter?.movies[indexPath.row].poster
         
-        Alamofire.request(imgUrl).responseImage { response in
+        Alamofire.request(imgUrl!).responseImage { response in
             debugPrint(response)
             if let image = response.result.value {
                 cell.movieImage.contentMode = UIView.ContentMode.scaleAspectFit;
@@ -66,18 +74,6 @@ class MoviesTableVC: UITableViewController,  ErrorDialogCallBack {
         }
         return cell
     }
-    
-//    func onMoveiClick(_ movieId: String) {
-//
-//        // Safe Push VC
-//        if let movieDetailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "idMovieDetailsVC") as? MovieDetailsVC {
-//            movieDetailsVC.movieId = movieId
-//            if let navigator = self.navigationController {
-//                navigator.pushViewController(movieDetailsVC, animated: true)
-//            }
-//        }
-//    }
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -96,7 +92,7 @@ class MoviesTableVC: UITableViewController,  ErrorDialogCallBack {
         let destination = segue.destination
         if let controller = destination as? MovieDetailsVC {
             
-            controller.movieId = movies[(self.tableView.indexPathForSelectedRow!.row)].id
+            controller.movieId = (self.presenter?.movies[(self.tableView.indexPathForSelectedRow!.row)].id)!
             tableView.deselectRow(at: self.tableView.indexPathForSelectedRow!, animated: true)
         }
         
@@ -107,14 +103,4 @@ class MoviesTableVC: UITableViewController,  ErrorDialogCallBack {
         print("status = \(status)")
     }
     
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destination = segue.destination
-//        if let movieDetailsVC = destination as? MovieDetailsVC {
-//            movieDetailsVC.delegat = self
-//        }
-//    }
 }

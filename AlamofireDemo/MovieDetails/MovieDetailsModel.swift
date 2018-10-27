@@ -10,11 +10,6 @@ import Foundation
 
 
 
-struct Movie : Codable {
-    let id: String
-    let poster: String
-}
-
 struct MovieDetails : Codable {
     let title: String
     let poster: String?
