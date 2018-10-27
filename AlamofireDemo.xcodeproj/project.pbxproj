@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A46000F21834E4C00228663 /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A46000E21834E4C00228663 /* MovieViewCell.swift */; };
+		0A460011218355F700228663 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A460010218355F700228663 /* AppUtils.swift */; };
+		0A5E5D782183A38D00B66460 /* MovieDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5E5D772183A38D00B66460 /* MovieDetailsVC.swift */; };
 		0AAC470721820CA500322A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC470621820CA500322A93 /* AppDelegate.swift */; };
-		0AAC470921820CA500322A93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC470821820CA500322A93 /* ViewController.swift */; };
 		0AAC470C21820CA500322A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC470A21820CA500322A93 /* Main.storyboard */; };
 		0AAC470E21820CA700322A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC470D21820CA700322A93 /* Assets.xcassets */; };
 		0AAC471121820CA700322A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC470F21820CA700322A93 /* LaunchScreen.storyboard */; };
 		0AAC471C21820CA800322A93 /* AlamofireDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC471B21820CA700322A93 /* AlamofireDemoTests.swift */; };
 		0AAC472721820CA800322A93 /* AlamofireDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC472621820CA800322A93 /* AlamofireDemoUITests.swift */; };
+		0AAC473521820F3900322A93 /* MovieTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC473421820F3900322A93 /* MovieTableVC.swift */; };
+		0AAC4737218212B600322A93 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC4736218212B500322A93 /* NetworkService.swift */; };
+		0AAC4739218213EA00322A93 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC4738218213EA00322A93 /* Model.swift */; };
+		0AAC473F218214F500322A93 /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC473B218214F500322A93 /* DictionaryEncoder.swift */; };
+		0AAC4740218214F500322A93 /* DictionaryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC473C218214F500322A93 /* DictionaryDecoder.swift */; };
+		0AAC4741218214F500322A93 /* DictionaryCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC473D218214F500322A93 /* DictionaryCodingKey.swift */; };
+		0AAC4742218214F500322A93 /* DictionaryErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC473E218214F500322A93 /* DictionaryErrors.swift */; };
+		BE8AFDE1E944C12A7E8FB9FB /* Pods_AlamofireDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC120484ADB98B264F21EA2 /* Pods_AlamofireDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A46000E21834E4C00228663 /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
+		0A460010218355F700228663 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		0A5E5D772183A38D00B66460 /* MovieDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsVC.swift; sourceTree = "<group>"; };
 		0AAC470321820CA500322A93 /* AlamofireDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofireDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAC470621820CA500322A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0AAC470821820CA500322A93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0AAC470B21820CA500322A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AAC470D21820CA700322A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AAC471021820CA700322A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +59,16 @@
 		0AAC472221820CA800322A93 /* AlamofireDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlamofireDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAC472621820CA800322A93 /* AlamofireDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireDemoUITests.swift; sourceTree = "<group>"; };
 		0AAC472821820CA800322A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AAC473421820F3900322A93 /* MovieTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableVC.swift; sourceTree = "<group>"; };
+		0AAC4736218212B500322A93 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0AAC4738218213EA00322A93 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0AAC473B218214F500322A93 /* DictionaryEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryEncoder.swift; path = AlamofireDemo/DictionaryCoding/DictionaryEncoder.swift; sourceTree = SOURCE_ROOT; };
+		0AAC473C218214F500322A93 /* DictionaryDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryDecoder.swift; path = AlamofireDemo/DictionaryCoding/DictionaryDecoder.swift; sourceTree = SOURCE_ROOT; };
+		0AAC473D218214F500322A93 /* DictionaryCodingKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryCodingKey.swift; path = AlamofireDemo/DictionaryCoding/DictionaryCodingKey.swift; sourceTree = SOURCE_ROOT; };
+		0AAC473E218214F500322A93 /* DictionaryErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryErrors.swift; path = AlamofireDemo/DictionaryCoding/DictionaryErrors.swift; sourceTree = SOURCE_ROOT; };
+		0ECF416ED1B021FBE236C7FA /* Pods-AlamofireDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireDemo/Pods-AlamofireDemo.release.xcconfig"; sourceTree = "<group>"; };
+		28ACFB149FFEFB1526812AED /* Pods-AlamofireDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireDemo/Pods-AlamofireDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4AC120484ADB98B264F21EA2 /* Pods_AlamofireDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlamofireDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8AFDE1E944C12A7E8FB9FB /* Pods_AlamofireDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +100,13 @@
 		0AAC46FA21820CA500322A93 = {
 			isa = PBXGroup;
 			children = (
+				0AAC473A218214B000322A93 /* Dictionary */,
 				0AAC470521820CA500322A93 /* AlamofireDemo */,
 				0AAC471A21820CA700322A93 /* AlamofireDemoTests */,
 				0AAC472521820CA800322A93 /* AlamofireDemoUITests */,
 				0AAC470421820CA500322A93 /* Products */,
+				54163CB64B78877E7764B15D /* Pods */,
+				1F3FB6381801413B59686697 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +124,16 @@
 			isa = PBXGroup;
 			children = (
 				0AAC470621820CA500322A93 /* AppDelegate.swift */,
-				0AAC470821820CA500322A93 /* ViewController.swift */,
-				0AAC470A21820CA500322A93 /* Main.storyboard */,
+				0A460010218355F700228663 /* AppUtils.swift */,
 				0AAC470D21820CA700322A93 /* Assets.xcassets */,
-				0AAC470F21820CA700322A93 /* LaunchScreen.storyboard */,
 				0AAC471221820CA700322A93 /* Info.plist */,
+				0AAC470F21820CA700322A93 /* LaunchScreen.storyboard */,
+				0AAC470A21820CA500322A93 /* Main.storyboard */,
+				0AAC4738218213EA00322A93 /* Model.swift */,
+				0A5E5D772183A38D00B66460 /* MovieDetailsVC.swift */,
+				0AAC473421820F3900322A93 /* MovieTableVC.swift */,
+				0A46000E21834E4C00228663 /* MovieViewCell.swift */,
+				0AAC4736218212B500322A93 /* NetworkService.swift */,
 			);
 			path = AlamofireDemo;
 			sourceTree = "<group>";
@@ -125,6 +156,34 @@
 			path = AlamofireDemoUITests;
 			sourceTree = "<group>";
 		};
+		0AAC473A218214B000322A93 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC473D218214F500322A93 /* DictionaryCodingKey.swift */,
+				0AAC473C218214F500322A93 /* DictionaryDecoder.swift */,
+				0AAC473B218214F500322A93 /* DictionaryEncoder.swift */,
+				0AAC473E218214F500322A93 /* DictionaryErrors.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		1F3FB6381801413B59686697 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AC120484ADB98B264F21EA2 /* Pods_AlamofireDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54163CB64B78877E7764B15D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28ACFB149FFEFB1526812AED /* Pods-AlamofireDemo.debug.xcconfig */,
+				0ECF416ED1B021FBE236C7FA /* Pods-AlamofireDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AAC472B21820CA800322A93 /* Build configuration list for PBXNativeTarget "AlamofireDemo" */;
 			buildPhases = (
+				C9C09FE5924294F6FD3B1949 /* [CP] Check Pods Manifest.lock */,
 				0AAC46FF21820CA500322A93 /* Sources */,
 				0AAC470021820CA500322A93 /* Frameworks */,
 				0AAC470121820CA500322A93 /* Resources */,
+				195C5D7C12325E75824111C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,13 +312,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		195C5D7C12325E75824111C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AlamofireDemo/Pods-AlamofireDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlamofireDemo/Pods-AlamofireDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9C09FE5924294F6FD3B1949 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlamofireDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0AAC46FF21820CA500322A93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AAC470921820CA500322A93 /* ViewController.swift in Sources */,
+				0AAC4740218214F500322A93 /* DictionaryDecoder.swift in Sources */,
+				0A5E5D782183A38D00B66460 /* MovieDetailsVC.swift in Sources */,
+				0AAC473F218214F500322A93 /* DictionaryEncoder.swift in Sources */,
+				0AAC4739218213EA00322A93 /* Model.swift in Sources */,
+				0AAC473521820F3900322A93 /* MovieTableVC.swift in Sources */,
+				0AAC4737218212B600322A93 /* NetworkService.swift in Sources */,
+				0A460011218355F700228663 /* AppUtils.swift in Sources */,
 				0AAC470721820CA500322A93 /* AppDelegate.swift in Sources */,
+				0AAC4742218214F500322A93 /* DictionaryErrors.swift in Sources */,
+				0AAC4741218214F500322A93 /* DictionaryCodingKey.swift in Sources */,
+				0A46000F21834E4C00228663 /* MovieViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,9 +549,11 @@
 		};
 		0AAC472C21820CA800322A93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28ACFB149FFEFB1526812AED /* Pods-AlamofireDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZNQHA9NHR9;
 				INFOPLIST_FILE = AlamofireDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,9 +568,11 @@
 		};
 		0AAC472D21820CA800322A93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ECF416ED1B021FBE236C7FA /* Pods-AlamofireDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZNQHA9NHR9;
 				INFOPLIST_FILE = AlamofireDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
